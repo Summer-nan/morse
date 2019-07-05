@@ -34,53 +34,99 @@
  morse.h
  '''c
  #ifndef _MORSE_H
+ 
 #define _MORSE_H
+
 class Morse
+
 {
+
   public:
+  
     Morse(int word);
+    
     void dot();
+    
     void dash();
+    
     void c_space();
+    
     void w_space();
+    
   private:
+  
     int _word; 
+    
 };
+
 '''
+
 morse.cpp
+
 
 '''cpp
 #include"Arduino.h"
+
 #include"Morse.h"
+
 Morse::Morse(int word)
+
 {
+
   pinMode(word,OUTPUT);
+  
   _word=word;
+  
 }
+
 void Morse::dot()
+
 {
+
   digitalWrite(_word,HIGH);
+  
   delay(350);
+  
   digitalWrite(_word,LOW);
+  
   delay(350);
+  
 }
+
 void Morse::dash()
+
 {
+
   digitalWrite(_word,HIGH);
+  
   delay(1400);
+  
   digitalWrite(_word,LOW);
+  
   delay(350);
+  
 }
+
 void Morse::c_space()
+
 {
+
   digitalWrite(_word,LOW);
+  
   delay(1050);
+  
 }
+
 void Morse::w_space()
+
 {
+
   digitalWrite(_word,LOW);
+  
   delay(2450); 
+  
 }
+
 '''
 
  ## 第三天 元器件以及电路图
@@ -90,4 +136,10 @@ void Morse::w_space()
  
  
  ## 第四天 总结归纳
- - 学会了一种新的写文档的形式
+ - 个人感受：
+ 通过这门课程让我到了什么是开源，开源能干什么；
+ 
+ 知道了几个特别有用的软件，比如 git 我觉得这是一个能够对我未来编程特别有用的软件，还学习到了他们的基本操作方法。
+ 
+ 虽然这节课的课程时间比较短，但是我觉得
+
